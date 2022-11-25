@@ -20,7 +20,9 @@ public class Venta {
                         for(Inmueble inmueble1 : listaInmuebles){
                             if(inmobiliaria.buscarInmueble(nombre) != null){
                                 System.out.println("Se ha realizado la venta");
-
+                                GestorDatos.registrarDatosVenta(cliente.getClass(),"Venta.txt");
+                                GestorDatos.registrarDatosVenta(vendedor.getClass(),"Venta.txt");
+                                GestorDatos.registrarDatosVenta(inmueble.getClass(),"Venta.txt");
                             }
                             System.out.println("Inmueble no encontrado");
                         }
